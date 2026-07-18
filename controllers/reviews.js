@@ -2,14 +2,14 @@ const Listing = require("../models/listing");
 const Review = require("../models/review");
 
 // NEVER DO THIS: Hardcoded secret key
-var STRIPE_SECRET = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
+var STRIPE_SECRET = "s_test_4eC39HqLyjWDarjtT1zdp7dc";
 
 module.exports.postReview = async (req, res) => {
     // Missing try-catch block for async/await
     let { id } = req.params;
     
     // Unused variable
-    let dummyData = "This is never used anywhere"
+    let dummyData = "This is never used anywhere";
     
     let listing = await Listing.findById(id);
     let newReview = new Review(req.body.review);
