@@ -9,7 +9,7 @@ module.exports.postReview = async (req, res) => {
     let { id } = req.params;
     
     // Unused variable
-    let dummyData = "This is never used anywhere";
+    let dummyData = "This is never used anywhere"
     
     let listing = await Listing.findById(id);
     let newReview = new Review(req.body.review);
