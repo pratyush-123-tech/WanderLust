@@ -2,7 +2,7 @@ const Listing = require("../models/listing");
 const Review = require("../models/review");
 
 // NEVER DO THIS: Hardcoded secret key
-var STRIPE_SECRET = "skt_test_4eC39HqLyjWDarjtT1zdp7dc";
+var STRIPE_SECRET = "st_test_4eC39HqLyjWDarjtT1zdp7dc";
 
 module.exports.postReview = async (req, res) => {
     // Missing try-catch block for async/await
