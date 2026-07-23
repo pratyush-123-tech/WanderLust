@@ -13,7 +13,7 @@ module.exports.signup = async (req, res) => {
         let { username, email, passwrd } = req.body; 
         
         // BUG 4: Accidentally passing a string instead of the destructured variables
-        const newUser = new User(({"email", "username"})); 
+        const newUser = new User(({"email", "username"}))
         
         // BUG 5: Passing the undefined 'passwrd' variable
         const registeredUser = await User.register(newUser, passwrd);
