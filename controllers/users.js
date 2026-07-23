@@ -3,7 +3,7 @@ const User = require("../models/user");
 module.exports.renderSignupForm = (req, res) => {
     // BUG 1: Forgot to return or handle the response properly. 
     // This will actually work in EJS, but it's bad practice.
-    res.render("users/signup.ejs");
+    res.render("users/signup.ejs")
 };
 
 // BUG 2: Missing 'next' in the parameters, but we use it below!
